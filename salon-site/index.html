@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMIÈRE | Beauty Salon</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+  <a href="#" class="logo">LUMIÈRE</a>
+
+  <nav>
+    <a href="#concept">CONCEPT</a>
+    <a href="#menu">MENU</a>
+    <a href="#access">ACCESS</a>
+    <a href="#reserve" class="nav-button">RESERVE</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-sub">BEAUTY SALON / TOKYO</p>
+    <h1>Find your<br>natural beauty.</h1>
+    <p>自分らしい美しさを、ここから。</p>
+    <a href="#reserve" class="button">ご予約はこちら</a>
+  </div>
+</section>
+
+<section id="concept" class="section concept">
+  <p class="section-label">CONCEPT</p>
+  <h2>美しさと向き合う、<br>特別な時間。</h2>
+  <p>
+    忙しい毎日の中で、自分自身を大切にする時間を。
+    LUMIÈREは、一人ひとりの魅力に寄り添い、
+    自然体の美しさを引き出す美容サロンです。
+  </p>
+</section>
+
+<section id="menu" class="section menu">
+  <p class="section-label">MENU</p>
+  <h2>Our Menu</h2>
+
+  <div class="menu-list">
+    <div class="menu-item">
+      <h3>Facial Treatment</h3>
+      <p>フェイシャルトリートメント</p>
+      <span>¥6,600〜</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Body Care</h3>
+      <p>ボディケア</p>
+      <span>¥8,800〜</span>
+    </div>
+
+    <div class="menu-item">
+      <h3>Special Course</h3>
+      <p>スペシャルコース</p>
+      <span>¥12,000〜</span>
+    </div>
+  </div>
+</section>
+
+<section class="section message">
+  <p class="section-label">OUR PROMISE</p>
+  <h2>あなたに寄り添う、<br>丁寧なケアを。</h2>
+  <p>
+    落ち着いた空間と丁寧なカウンセリングで、
+    心も身体もリラックスできる時間をお届けします。
+  </p>
+</section>
+
+<section id="access" class="section access">
+  <p class="section-label">ACCESS</p>
+  <h2>Visit Us</h2>
+  <p>LUMIÈRE Beauty Salon</p>
+  <p>東京都渋谷区〇〇 1-2-3</p>
+  <p>営業時間 10:00〜19:00</p>
+</section>
+
+<section id="reserve" class="reserve">
+  <p class="section-label">RESERVATION</p>
+  <h2>自分を大切にする時間を。</h2>
+  <a href="mailto:example@example.com" class="button">
+    ご予約・お問い合わせ
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <p>LUMIÈRE</p>
+  <small>© 2026 LUMIÈRE Beauty Salon</small>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = document.querySelectorAll(
+    ".section, .reserve"
+  );
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  targets.forEach((target) => {
+    target.classList.add("fade-in");
+    observer.observe(target);
+  });
+});
+</script>
+
+</body>
+</html>
